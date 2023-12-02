@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-rc.2.23480.1"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-rc.2.23480.1"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-rc.2.23480.1"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Finance.Models\Finance.Models.csproj" />
+    <ProjectReference Include="..\Finance.DataAccess\Finance.DataAccess.csproj" />
+
+  </ItemGroup>
+
 </Project>
