@@ -13,9 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Finance.Models\Finance.Models.csproj" />
-    <ProjectReference Include="..\Finance.DataAccess\Finance.DataAccess.csproj" />
-
+    <ProjectReference Include="..\Finance.Models\Finance.Models.csproj"/>
+    <ProjectReference Include="..\Finance.DataAccess\Finance.DataAccess.csproj"/>
   </ItemGroup>
 
 </Project>
