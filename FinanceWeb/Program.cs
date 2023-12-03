@@ -1,8 +1,13 @@
+using Finance.DataAccess.DBContext;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<ApplicationDBContext>(option => 
+    option.UseSqlite("Data Source=./Finance.Models/Data_Base/financeweb.db")
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
