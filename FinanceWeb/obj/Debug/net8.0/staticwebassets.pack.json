@@ -5,12 +5,124 @@
       "PackagePath": "staticwebassets\\FinanceWeb.bundle.scp.css"
     },
     {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\css\\apexcharts.css",
+      "PackagePath": "staticwebassets\\css\\apexcharts.css"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\css\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-icons.css"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
       "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\css\\tooplate-mini-finance.css",
+      "PackagePath": "staticwebassets\\css\\tooplate-mini-finance.css"
+    },
+    {
       "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\fonts\\RobotoMono-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\RobotoMono-Regular.ttf"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\acc-icon.jpg",
+      "PackagePath": "staticwebassets\\images\\acc-icon.jpg"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\credit-card.png",
+      "PackagePath": "staticwebassets\\images\\credit-card.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\flag\\australia.png",
+      "PackagePath": "staticwebassets\\images\\flag\\australia.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\flag\\european-union.png",
+      "PackagePath": "staticwebassets\\images\\flag\\european-union.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\flag\\singapore.png",
+      "PackagePath": "staticwebassets\\images\\flag\\singapore.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\flag\\united-kingdom.png",
+      "PackagePath": "staticwebassets\\images\\flag\\united-kingdom.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\flag\\united-states.png",
+      "PackagePath": "staticwebassets\\images\\flag\\united-states.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\medium-shot-happy-man-smiling.jpg",
+      "PackagePath": "staticwebassets\\images\\medium-shot-happy-man-smiling.jpg"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\profile\\senior-man-white-sweater-eyeglasses.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\senior-man-white-sweater-eyeglasses.jpg"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\profile\\young-beautiful-woman-pink-warm-sweater.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\young-beautiful-woman-pink-warm-sweater.jpg"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\profile\\young-woman-with-round-glasses-yellow-sweater.jpg",
+      "PackagePath": "staticwebassets\\images\\profile\\young-woman-with-round-glasses-yellow-sweater.jpg"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\social\\search.png",
+      "PackagePath": "staticwebassets\\images\\social\\search.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\social\\snapchat.png",
+      "PackagePath": "staticwebassets\\images\\social\\snapchat.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\social\\spotify.png",
+      "PackagePath": "staticwebassets\\images\\social\\spotify.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\social\\telegram.png",
+      "PackagePath": "staticwebassets\\images\\social\\telegram.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\social\\tiktok.png",
+      "PackagePath": "staticwebassets\\images\\social\\tiktok.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\images\\social\\youtube.png",
+      "PackagePath": "staticwebassets\\images\\social\\youtube.png"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\js\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\js\\apexcharts.min.js"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
       "Id": "E:\\Finance_Web\\Finance-Web\\FinanceWeb\\wwwroot\\js\\site.js",
