@@ -11,19 +11,17 @@ namespace Finance.Models.Models
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
-        public required string Name { get; set; }
+        public long ID_Card {get; set;}
+        
         [Required]
-        public required string Address { get; set; }
-        [Required]
-        public int Phone { get; set; }
-        public string? Mail { get; set; }
         public int IdUser { get; set; }
 
         [ForeignKey("IdUser")]
-        public User? User { get; set; }
+        public virtual User? User { get; set; }
 
         // Navigation property for the relationship with Spending
-        public List<Spending>? Spendings { get; set; }
+        public virtual List<Spending>? Spendings { get; set; }
     }
 }

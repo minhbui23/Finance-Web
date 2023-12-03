@@ -11,12 +11,8 @@ namespace Finance.Models.Models
     {        
         [Key]
         public int Id { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateOnly Date { get; set; }
-
-        [DataType(DataType.Time)]
-        public TimeOnly Time { get; set; }
+        [Required]
+        public DateTime Time { get; set; }
 
         [Required]
         [EnumDataType(typeof(SpendingCategory))]
@@ -28,16 +24,23 @@ namespace Finance.Models.Models
         public decimal Balance { get; set; }
 
         public int IdWallet { get; set; }
+
         [ForeignKey("IdWallet")]
-        public Wallet? Wallet { get; set; }
+        public virtual Wallet? Wallet { get; set; }
     }
     public enum SpendingCategory
     {
+        [Display(Name = "Food")]
         Food,
+        [Display(Name = "Entertainment")]
         Entertainment,
+        [Display(Name = "Moving")]
         Moving,
+        [Display(Name = "Tuition")]
         Tuition,
+        [Display(Name = "RentHouse")]
         RentHouse,
+        [Display(Name = "Other")]
         Other
     }
     

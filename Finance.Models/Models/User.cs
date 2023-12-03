@@ -16,7 +16,14 @@ namespace Finance.Models.Models
         public required string UserName { get; set; }
         [Required]
         public required string Password { get; set; }
+        [Required]
+        public required string Name { get; set; }
+        [Required]
+        public required string Address { get; set; }
+        [Required]
+        public int Phone { get; set; }
+        public string? Mail { get; set; }
 
-        public List<Wallet>? Wallets { get; set; }
+        public virtual List<Wallet>? Wallets { get; set; }
     }
 }

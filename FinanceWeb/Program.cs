@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDBContext>(option => 
-    option.UseSqlite("Data Source=./Finance.Models/Data_Base/financeweb.db")
+    option.UseSqlite("Data Source=../Finance.DataAccess/Data_Base/financeweb.db")
 );
 var app = builder.Build();
 
