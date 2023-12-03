@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Finance.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20231203074310_AddData")]
+    [Migration("20231203144128_AddData")]
     partial class AddData
     {
         /// <inheritdoc />
