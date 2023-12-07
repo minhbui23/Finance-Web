@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Finance.Models.Models
 {
@@ -14,12 +15,13 @@ namespace Finance.Models.Models
 
         [Required]
         public long ID_Card {get; set;}
-        
-        [Required]
-        public int IdUser { get; set; }
 
-        [ForeignKey("IdUser")]
-        public virtual User? User { get; set; }
+        [Required]
+        public string UserId { get; set; }
+
+        // Navigation property for the relationship with IdentityUser
+        [ForeignKey("UserId")]
+        public virtual ApplicationUser User { get; set; }
 
         // Navigation property for the relationship with Spending
         public virtual List<Spending>? Spendings { get; set; }
