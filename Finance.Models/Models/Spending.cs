@@ -21,8 +21,6 @@ namespace Finance.Models.Models
         [Range(0, double.MaxValue, ErrorMessage = "Amount must be greater than 0")]
         public decimal Amount { get; set; }
 
-        public decimal Balance { get; set; }
-
         public int IdWallet { get; set; }
 
         [ForeignKey("IdWallet")]

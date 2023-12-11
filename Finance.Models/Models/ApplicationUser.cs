@@ -14,7 +14,9 @@ namespace Finance.Models.Models
         public required string Name {  get; set; }
         public string? Address { get; set; }
 
-        public virtual List<Wallet>? Wallets {  get; set; }
+        public  virtual List<Wallet>? Wallets {  get; set; }
+        public int? ActiveWalletId { get; set; }
+        public virtual Wallet? ActiveWallet { get; set; }
 
     }
 }

@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,52 +48,68 @@
 
             <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
                 <div class="position-sticky py-4 px-3 sidebar-sticky">
-                    <ul class="nav flex-column h-100">
+                    <ul class="nav flex-column h-100 ">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                            <a class="nav-link"  asp-controller="Home" asp-action="Index">
                                 <i class="bi-house-fill me-2"></i>
                                 Overview
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="Spending" asp-action="Index">
+                            <a class="nav-link "  asp-controller="Spending" asp-action="Index">
+                                <i class="bi bi-cash-coin me-2"></i> 
+                                My Spending
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Wallet" asp-action="Index" >
                                 <i class="bi-wallet me-2"></i>
                                 My Wallet
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" asp-asp-area="" asp-controller="Profile" asp-action="Index">
-                                <i class="bi-person me-2"></i>
+                            <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index">
+                                <i class="bi-gear me-2"></i>
                                 Profile
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="bi-gear me-2"></i>
-                                Settings
-                            </a>
+                        
+
+                        <li class="nav-item featured-box mt-lg-5 mt-4 mb-4 roboto-regular">
+                            <img src="images/credit-card.png" class="img-fluid" >
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                var user = await UserManager.GetUserAsync(User);
+
+                                if (user != null )
+                                {
+                                    var userWithWallets = UserManager.Users.Include(u => u.Wallets).SingleOrDefault(u => u.Id == user.Id);
+                                    var activeWallet = userWithWallets.Wallets.FirstOrDefault(w => w.Id == user.ActiveWalletId);
+
+                                    if (activeWallet != null)
+                                    {
+                                        <div>
+                                            <i class="bi bi-credit-card-2-front">@activeWallet.ID_Card</i>
+                                        </div>
+                                        <div>
+                                            <i class="bi bi-currency-dollar">@activeWallet.Balance</i>
+                                        </div>
+                                    }
+                                    <a class="btn custom-btn" asp-controller="Wallet" asp-action="Create">Create New Wallet</a>
+                                }
+
+                            }
                         </li>
 
-                        <li class="nav-item">
+
+                        <li class="nav-item border-top mt-auto pt-2">
                             <a class="nav-link">
                                 <i class="bi-question-circle me-2"></i>
                                 Help Center
-                            </a>
-                        </li>
-
-                        <li class="nav-item featured-box mt-lg-5 mt-4 mb-4">
-                            <img src="images/credit-card.png" class="img-fluid" alt="">
-
-                            <a class="btn custom-btn" href="#">Upgrade</a>
-                        </li>
-
-                        <li class="nav-item border-top mt-auto pt-2">
-                            <a class="nav-link" href="#">
-                                <i class="bi-box-arrow-left me-2"></i>
-                                Logout
                             </a>
                         </li>
                     </ul>

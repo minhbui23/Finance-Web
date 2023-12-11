@@ -21,7 +21,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
     option.UseSqlite("Data Source=../Finance.DataAccess/Data_Base/financeweb.sqlite3")
 );
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().
+builder.Services.AddDefaultIdentity<ApplicationUser>().AddRoles<IdentityRole>().
     AddEntityFrameworkStores<ApplicationDBContext>().AddDefaultTokenProviders();
 builder.Services.AddRazorPages();
 

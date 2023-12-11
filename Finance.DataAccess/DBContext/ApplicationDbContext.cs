@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Finance.DataAccess.DBContext
 {
-    public class ApplicationDBContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDBContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {

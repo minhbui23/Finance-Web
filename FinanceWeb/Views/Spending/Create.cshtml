@@ -1,5 +1,5 @@
 @model Spending
-
+@using Finance.Models.Models
 <script>
     window.onload = function() {
         var currentDate = new Date();
@@ -22,8 +22,8 @@
             <h2>Add New Spending</h2>
         </div>
 
-        <input type="hidden" asp-for="IdWallet" value="1" />
-        <input type="hidden" asp-for="Balance" value="10000" />
+        
+        
 
         <fieldset class="mb-4">
             

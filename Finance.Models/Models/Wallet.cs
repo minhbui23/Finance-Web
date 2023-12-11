@@ -14,14 +14,17 @@ namespace Finance.Models.Models
         public int Id { get; set; }
 
         [Required]
-        public long ID_Card {get; set;}
+        [StringLength(15, MinimumLength = 1)]
+        public string ID_Card {get; set;}
 
         [Required]
+        public decimal Balance { get; set; }
+
         public string UserId { get; set; }
 
         // Navigation property for the relationship with IdentityUser
         [ForeignKey("UserId")]
-        public virtual ApplicationUser User { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 
         // Navigation property for the relationship with Spending
         public virtual List<Spending>? Spendings { get; set; }

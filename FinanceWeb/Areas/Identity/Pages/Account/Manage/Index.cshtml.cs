@@ -4,6 +4,7 @@
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Finance.Models.Models;
@@ -15,12 +16,12 @@ namespace FinanceWeb.Areas.Identity.Pages.Account.Manage
 {
     public class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -59,22 +60,32 @@ namespace FinanceWeb.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            [Display(Name = "Name")]
+            public string Name {get; set;}
             
+            [Display(Name = "Address")]
+            public string Address {get; set;}
 
 
 
         }
 
-        private async Task LoadAsync(IdentityUser user)
+        private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            
+            var name = user.Name;
+            var address = user.Address;
 
             Username = userName;
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Name = name,
+                Address = address
             };
         }
 
@@ -93,6 +104,8 @@ namespace FinanceWeb.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnPostAsync()
         {
             var user = await _userManager.GetUserAsync(User);
+            var name = user.Name;
+            var address = user.Address;
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
@@ -114,7 +127,14 @@ namespace FinanceWeb.Areas.Identity.Pages.Account.Manage
                     return RedirectToPage();
                 }
             }
-
+            if(Input.Name != user.Name){
+                user.Name = Input.Name;
+                await _userManager.UpdateAsync(user);
+            }
+            if(Input.Address != user.Address){
+                user.Address = Input.Address;
+                await _userManager.UpdateAsync(user);
+            }
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
