@@ -36,10 +36,12 @@ namespace Finance_Web.Controllers
                 if (user != null)
                 {
                     // Step 2: Retrieve the user with active wallet and related spendings
+#pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
                     var userWithActiveWallet = _userManager.Users
                         .Include(u => u.Wallets)
                         .ThenInclude(w => w.Spendings)
                         .SingleOrDefault(u => u.Id == user.Id && u.ActiveWalletId != null);
+#pragma warning restore CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
 
                     if (userWithActiveWallet != null)
                     {

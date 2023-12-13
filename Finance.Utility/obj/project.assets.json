@@ -2943,19 +2943,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Minh'sLaptop\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Finance_Web\\Finance-Web\\Finance.Utility\\Finance.Utility.csproj",
+      "projectUniqueName": "D:\\Finance-Web\\Finance.Utility\\Finance.Utility.csproj",
       "projectName": "Finance.Utility",
-      "projectPath": "E:\\Finance_Web\\Finance-Web\\Finance.Utility\\Finance.Utility.csproj",
-      "packagesPath": "C:\\Users\\Minh'sLaptop\\.nuget\\packages\\",
-      "outputPath": "E:\\Finance_Web\\Finance-Web\\Finance.Utility\\obj\\",
+      "projectPath": "D:\\Finance-Web\\Finance.Utility\\Finance.Utility.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "D:\\Finance-Web\\Finance.Utility\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Minh'sLaptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2963,6 +2963,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
