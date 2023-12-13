@@ -24,6 +24,24 @@
     <link href="~/css/site.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the current page pathname
+    const currentPagePath = window.location.pathname;
+
+    // Get all the navigation links
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Loop through all the navigation links
+    navLinks.forEach(navLink => {
+        // Check if the link's pathname matches the current page's pathname
+        if (new URL(navLink.href, window.location.origin).pathname === currentPagePath) {
+            // Add the "active" class to the link
+            navLink.classList.add("active");
+        }
+    });
+});
+</script>
 </head>
 
 <body>
