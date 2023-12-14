@@ -26,6 +26,12 @@ builder.Services.AddDefaultIdentity<ApplicationUser>().AddRoles<IdentityRole>().
 builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login";
+    options.AccessDeniedPath = "/AccessDenied";
+    options.LogoutPath = "/Logout";
+});
 
 var app = builder.Build();
 

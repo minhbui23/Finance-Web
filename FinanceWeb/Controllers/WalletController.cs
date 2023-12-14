@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Finance.DataAccess.DBContext;
 using Finance.Models.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +15,7 @@ using Microsoft.Extensions.Logging;
 
 namespace FinanceWeb.Controllers
 {
-    
+    [Authorize]
     public class WalletController : Controller
     {
         private readonly ApplicationDBContext _db;

@@ -11,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Finance_Web.Controllers
 {
+    [Authorize]
     public class SpendingController : Controller
     {
         private readonly ApplicationDBContext _db;
