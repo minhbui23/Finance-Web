@@ -117,15 +117,39 @@ namespace Finance_Web.Controllers
             if(spendingFromDb == null){
                 return NotFound();
             }
+            var user = _userManager.GetUserAsync(User).Result;
+            if(user != null){
+                var userWithActiveWallet = _userManager.Users
+                        .Include(u => u.Wallets)
+                        .SingleOrDefault(u => u.Id == user.Id);
+                if (userWithActiveWallet != null && userWithActiveWallet.ActiveWalletId.HasValue)
+                {
+                   userWithActiveWallet.ActiveWallet.Balance += spendingFromDb.Amount; 
+                   
+                }
+                
+            }
             return View(spendingFromDb);
         }
         [HttpPost]
         public IActionResult Edit(Spending obj){
-            if(ModelState.IsValid){
-                _db.Spendings.Update(obj);
-                _db.SaveChanges();
-                TempData["success"] = "Category updated successfully";
-                return RedirectToAction("Index");
+            var user = _userManager.GetUserAsync(User).Result;
+            if(user != null){
+                var userWithActiveWallet = _userManager.Users
+                        .Include(u => u.Wallets)
+                        .SingleOrDefault(u => u.Id == user.Id);
+                if (userWithActiveWallet != null && userWithActiveWallet.ActiveWalletId.HasValue)
+                {
+                   userWithActiveWallet.ActiveWallet.Balance -= obj.Amount; 
+                    obj.IdWallet = userWithActiveWallet.ActiveWalletId.Value;
+
+                   _db.Spendings.Update(obj);
+                   _db.SaveChanges();
+                    TempData["success"] = "Category updated successfully";
+
+                   return RedirectToAction("Index");
+                }
+                
             }
             return View(obj);
         }
@@ -146,10 +170,30 @@ namespace Finance_Web.Controllers
             if(obj == null){
                 return NotFound();
             }
-            _db.Spendings.Remove(obj);
-            _db.SaveChanges();
-            TempData["success"] = "Category deleted successfully";
-            return RedirectToAction("Index");
+            
+            var user = _userManager.GetUserAsync(User).Result;
+
+            if (user != null)
+                {
+                    // Step 2: Fetch the user's ActiveWalletID based on UserID
+                    var userWithActiveWallet = _userManager.Users
+                        .Include(u => u.Wallets)
+                        .SingleOrDefault(u => u.Id == user.Id);
+                    
+                    if (userWithActiveWallet != null && userWithActiveWallet.ActiveWalletId.HasValue)
+                    {
+                       
+                        
+                        userWithActiveWallet.ActiveWallet.Balance += obj.Amount;
+
+                        _db.Remove(obj);
+                        _db.SaveChanges();
+                        TempData["success"] = "Category deleted successfully";
+                        
+                        return RedirectToAction("Index");
+                    }
+                }
+                return View(id);
         }
     }
 }

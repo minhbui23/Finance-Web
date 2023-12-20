@@ -4,14 +4,14 @@
     "D:\\Finance-Web\\FinanceWeb\\FinanceWeb.csproj": {}
   },
   "projects": {
-    "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj": {
+    "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj",
+        "projectUniqueName": "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj",
         "projectName": "Finance.DataAccess",
-        "projectPath": "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj",
+        "projectPath": "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\Finance-Web\\Finance.DataAccess\\obj\\",
+        "outputPath": "d:\\Finance-Web\\Finance.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -265,8 +265,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj": {
-                "projectPath": "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj"
+              "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj": {
+                "projectPath": "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj"
               },
               "D:\\Finance-Web\\Finance.Models\\Finance.Models.csproj": {
                 "projectPath": "D:\\Finance-Web\\Finance.Models\\Finance.Models.csproj"

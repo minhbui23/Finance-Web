@@ -94,7 +94,9 @@ namespace FinanceWeb.Controllers
                 return NotFound();
             }
 
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             Wallet walletFromDb = _db.Wallets.Find(id);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
             if (walletFromDb == null)
             {
@@ -127,7 +129,7 @@ namespace FinanceWeb.Controllers
             return View(updatedWallet);
         }
 
-        public IActionResult Delete(int? id){
+        public IActionResult Delete(int? id){   
             if(id == null || id == -0) {
                 return NotFound();
             }

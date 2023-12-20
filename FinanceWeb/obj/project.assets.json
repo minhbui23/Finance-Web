@@ -8811,8 +8811,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj": {
-              "projectPath": "D:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj"
+            "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj": {
+              "projectPath": "d:\\Finance-Web\\Finance.DataAccess\\Finance.DataAccess.csproj"
             },
             "D:\\Finance-Web\\Finance.Models\\Finance.Models.csproj": {
               "projectPath": "D:\\Finance-Web\\Finance.Models\\Finance.Models.csproj"
